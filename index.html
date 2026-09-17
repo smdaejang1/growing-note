@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사업자 관리 노트</title>
+<meta http-equiv="refresh" content="0; url=./biz-note.html">
+<link rel="manifest" href="./manifest.json">
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"맑은 고딕",sans-serif;background:#f5f6fa;color:#23272f;
+       display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+</style>
+</head>
+<body>
+  <p>사업자 관리 노트로 이동 중입니다…</p>
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./sw.js').catch(()=>{});
+    }
+    location.replace('./biz-note.html');
+  </script>
+</body>
+</html>
