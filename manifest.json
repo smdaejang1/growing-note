@@ -2,7 +2,7 @@
   "name": "사업자 관리 노트",
   "short_name": "사업자노트",
   "description": "ABO 파트너 코칭·소통 기록과 목표 관리를 위한 도구",
-  "start_url": "./biz-note.html",
+  "start_url": "./growing-note.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
