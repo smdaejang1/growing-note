@@ -1,9 +1,9 @@
-// 사업자관리노트 서비스 워커 — network-first 캐싱
+// 사업자관리노트(growing-note) 서비스 워커 — network-first 캐싱
 // 새 버전을 배포할 때는 CACHE 이름의 버전 숫자만 올려주세요 (예: v1 -> v2)
-const CACHE = 'biz-note-v1';
+const CACHE = 'growing-note-v1';
 const PRECACHE_URLS = [
   './',
-  './biz-note.html',
+  './growing-note.html',
   './manifest.json'
 ];
 
@@ -34,6 +34,6 @@ self.addEventListener('fetch', event => {
         caches.open(CACHE).then(cache => cache.put(event.request, copy)).catch(() => {});
         return response;
       })
-      .catch(() => caches.match(event.request).then(cached => cached || caches.match('./biz-note.html')))
+      .catch(() => caches.match(event.request).then(cached => cached || caches.match('./growing-note.html')))
   );
 });
